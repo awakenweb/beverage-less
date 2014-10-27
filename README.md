@@ -1,4 +1,4 @@
-beverage-scss
+beverage-less
 =============
 
 Less compiler module for Beverage task runner
@@ -30,7 +30,7 @@ In your `drinkmenu.php` file, add the following task:
 <?php
 
 use Awakenweb\Beverage\Beverage;
-use Awakenweb\BeverageScss\Less;
+use Awakenweb\BeverageLess\Less;
 
 function defaultTask()
 {
@@ -50,13 +50,11 @@ Options
 -------
 
 
-The `Scss` class accepts 3 parameters :
+The `Less` class accepts 2 parameters :
 
-* `importPath` : tells the Scss compiler where to search for when it encounters an `@include` or `@import` directives.
+* `importPath` : tells the Less compiler where to search for when it encounters an import directive.
 
-* `useCompass` : self-explanatory. True or False. You can use `Scss::USE_COMPASS` or `Scss::NO_COMPASS` for better maintenability.
-
-* `formatter` : choose from the 4 available formatters : `Scss::NESTED`, `Scss::COMPRESSED`, `Scss::CRUNCHED`, or `Scss::NORMAL`. (`CRUNCHED` is equivalent to `COMPRESSED` but also stripes CSS comments)
+* `formatter` : choose from the 3 available formatters : `Less::LESSJS`, `Less::COMPRESSED`, or `Less::NORMAL`.
 
 
 Contributing
